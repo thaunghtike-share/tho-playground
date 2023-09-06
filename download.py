@@ -2,9 +2,28 @@ import os
 import subprocess
 import time
 from tqdm import tqdm
-from main import stocks, is_file_over_3_days_old
 import itertools
 
+def stocks():
+    return json.load(open(stocks_json))
+
+
+def is_file_over_3_days_old(file_path):
+    # Get the modification time of the file
+    mod_time = os.path.getmtime(file_path)
+
+    # Get the current time
+    current_time = time.time()
+
+    # Calculate the time difference in seconds
+    time_diff = current_time - mod_time
+
+    # Calculate the time difference in days
+    time_diff_days = time_diff / (24 * 60 * 60)
+
+    # Check if the file is over 3 days old
+    return time_diff_days > 3
+    
 def edgar_download():
     datadir = os.path.expanduser("~/Dropbox/Family Room/data")
     repo_path = "."
