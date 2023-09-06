@@ -18,9 +18,4 @@ def create_and_push_files():
     subprocess.run(["git", "push"])
 
 if __name__ == '__main__':
-    # Change to your Git repository directory
-    # Make sure Git is configured with your name and email
-    subprocess.run(["git", "config", "user.name", "thaunghtike-share"])
-    subprocess.run(["git", "config", "user.email", "zwe.zzzin@email.com"])
-
     create_and_push_files()
