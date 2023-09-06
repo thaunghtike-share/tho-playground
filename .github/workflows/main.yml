@@ -22,7 +22,7 @@ jobs:
       - name: Set Git author identity
         run: |
           git config --global user.email "zwe.zzzin@example.com"
-          git config --global user.name "thaunghtike-share"
+          git config --global user.name "thae"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           
