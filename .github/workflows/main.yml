@@ -22,4 +22,4 @@ jobs:
       - name: Run Python script
         run: python download.py
         env:
-          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
