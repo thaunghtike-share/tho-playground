@@ -19,4 +19,6 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: Run Python script
-        run: python download.py  # Replace with the path to your Python script
+        run: python download.py 
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
