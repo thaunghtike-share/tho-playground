@@ -1,6 +1,9 @@
 name: Edgar Download and Push
 
-on: push # Schedule the workflow to run daily (adjust the timing as needed)
+on:
+  push:
+    branches:
+      - main
 
 jobs:
   build:
@@ -12,13 +15,11 @@ jobs:
 
       - name: Set up Python
         uses: actions/setup-python@v2
-        with:
-          python-version: 3.x
 
       - name: Install dependencies
         run: pip install -r requirements.txt
 
       - name: Run Python script
-        run: python download.py 
+        run: python download.py
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
