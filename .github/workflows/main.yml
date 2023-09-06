@@ -16,7 +16,7 @@ jobs:
           python-version: 3.x
 
       - name: Install dependencies
-        run: pip install tqdm requests
+        run: pip install -r requirements.txt
 
       - name: Run Python script
-        run: python main.py  # Replace with the path to your Python script
+        run: python download.py  # Replace with the path to your Python script
