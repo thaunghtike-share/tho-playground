@@ -18,8 +18,13 @@ jobs:
 
       - name: Install dependencies
         run: pip install -r requirements.txt
-
-      - name: Run Python script
-        run: python download.py
+        
+      - name: Set Git author identity
+        run: |
+          git config --global user.email "zwe.zzzin@example.com"
+          git config --global user.name "thaunghtike-share"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          
+      - name: Run Python script
+        run: python download.py
