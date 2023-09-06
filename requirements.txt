@@ -5,4 +5,3 @@ requests
 tqdm
 pandas
 ipydatagrid
-itertools
