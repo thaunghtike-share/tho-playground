@@ -1,0 +1,7 @@
+jupyter
+nbconvert
+nbformat
+requests
+tqdm
+pandas
+ipydatagrid
