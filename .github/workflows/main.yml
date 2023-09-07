@@ -20,7 +20,7 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: install gh
-        run: apt install gh
+        run: sudo apt install gh
         
       - name: Run Python script
         run: python download.py
