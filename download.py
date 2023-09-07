@@ -15,7 +15,7 @@ def create_and_push_files():
     subprocess.run(["git", "commit", "-m", "Add files"])
 
     # Push the changes to the repository
-    subprocess.run(["git", "push"])
+    subprocess.run(["gh", "repo", "push"])
 
 if __name__ == '__main__':
     create_and_push_files()
