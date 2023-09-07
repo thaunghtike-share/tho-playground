@@ -3,7 +3,7 @@ import subprocess
 
 def create_and_push_files():
     for i in range(1, 6):
-        filename = f"test_file_{i}.txt"
+        filename = f"t_file_{i}.txt"
         with open(filename, "w") as file:
             file.write(f"This is file {i}\n")
         print(f"Created {filename}")
